@@ -24,8 +24,8 @@ except ImportError:
                       '\n' + fr.RED + "3) Verify with: python -c \"import win32api; print('pywin32 installed successfully')\"", Style.RESET_ALL)
 print(fr.RED + "[!] be very careful if you decide to edit path variables as it may change some of ur files permissions in other directories so do it wisely and read whole code to stay safe!",Style.RESET_ALL)
 user = getpass.getuser()
-home = pathlib.Path.home() / ".pm_data" # <-- DO NOT EDIT THIS IF YOU DO THEN YOU WILL HAVE TO EDIT FEW LINES ALSO 
-password_file = home / "passwords.json" # <-- EDIT THIS IF YOU EDIT home VARIABLE
+home = pathlib.Path.home() / ".pm_data" # <-- DO NOT EDIT THIS IF YOU DO THEN YOU WILL MAKE PASSWORD FILE BE SOMEWHERE ELSE IN YOUR SYSTEM
+password_file = home / "passwords.json"
 def MakeSure():
     if not os.path.exists(home):
         print(fr.RED + f"[!] couldnt find passwords file in '{home}'\nCreating one...")
@@ -471,3 +471,4 @@ while True:
         
         
         
+
